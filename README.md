@@ -36,7 +36,8 @@ knexCleaner.clean(bookshelf.knex).then(function() {
 
 var options = {
   mode: 'delete', // Valid options 'truncate', 'delete'
-  ignoreTables: ['Dont_Del_1', 'Dont_Del_2']
+  ignoreTables: ['Dont_Del_1', 'Dont_Del_2'],
+  drop: true // Will drop all tables
 }
 
 knexCleaner.clean(knex, options).then(function() {
